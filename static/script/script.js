@@ -86,8 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             
             const respuesta = await response.text();
+            document.body.innerHTML = respuesta;
             console.log("El servidor dijo: " + respuesta)
-            window.open('cd/' + respuesta, '_blank');
+            window.print(respuesta);
         }
         catch (e) {
             console.log("Error en el servidor: " + e.message);
